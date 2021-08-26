@@ -7,7 +7,7 @@ import {CatGLError} from './CatGLError.js';
  * by a child class.
  */
 export class AbstractError extends CatGLError {
-  constructor(msg) {
-    super(msg || 'Must be implemented by subclass.');
+  constructor() {
+    super('Must be implemented by subclass.');
   }
 }
