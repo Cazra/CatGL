@@ -1,0 +1,27 @@
+{
+  "name": "catgl",
+  "version": "1.0.0",
+  "description": "Yet another WebGL library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cazra/CatGL.git"
+  },
+  "author": "Cazra",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/Cazra/CatGL/issues"
+  },
+  "homepage": "https://github.com/Cazra/CatGL#readme",
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^3.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-jsdoc": "^2.4.1",
+    "grunt-string-replace": "^1.3.1"
+  }
+}
