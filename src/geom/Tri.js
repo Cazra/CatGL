@@ -1,6 +1,6 @@
 'use strict';
 
-import {ValidationError} from '../errors/ValidationError.js';
+import {GeometryError} from '../errors/GeometryError.js';
 import {Vert} from './Vert.js';
 
 /**
@@ -33,7 +33,7 @@ export class Tri {
   }
   set v1(v) {
     if (!(v instanceof Vert))
-      throw new ValidationError('v1 must be a Vert.');
+      throw new GeometryError('v1 must be a Vert.');
     else {
       this._n = undefined;
       this._verts[0] = v;
@@ -49,7 +49,7 @@ export class Tri {
   }
   set v2(v) {
     if (!(v instanceof Vert))
-      throw new ValidationError('v2 must be a Vert.');
+      throw new GeometryError('v2 must be a Vert.');
     else {
       this._n = undefined;
       this._verts[1] = v;
@@ -65,7 +65,7 @@ export class Tri {
   }
   set v3(v) {
     if (!(v instanceof Vert))
-      throw new ValidationError('v3 must be a Vert.');
+      throw new GeometryError('v3 must be a Vert.');
     else {
       this._n = undefined;
       this._verts[2] = v;
@@ -81,10 +81,10 @@ export class Tri {
   }
   set verts(verts) {
     if (verts.length !== 3)
-      throw new ValidationError(`Tri must be set to exactly 3 Verts.`);
+      throw new GeometryError(`Tri must be set to exactly 3 Verts.`);
     _.each(verts, v => {
       if (!(v instanceof Vert))
-        throw new ValidationError(
+        throw new GeometryError(
           `Must construct Tri out of 3 Vert elements. Got ${verts}.`);
     });
     this._verts = verts;
