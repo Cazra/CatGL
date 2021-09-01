@@ -2,6 +2,8 @@
 
 import * as debug from './debug';
 import * as errors from './errors';
+import * as geom from './geom';
+import * as io from './io';
 
 /**
  * The top-level CatGL namespace.
@@ -21,6 +23,8 @@ window.CatGL = (() => {
     // packages
     debug,
     errors,
+    geom,
+    io,
 
     // constants
     EPSILON: glMatrix.EPSILON,
